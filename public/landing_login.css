@@ -1,0 +1,11 @@
+.banner {
+    background-image: url("img/landingpic.png") !important;
+    background-size: cover !important;
+    height: 400px !important;
+    margin-top:100px;
+  }
+
+.sect {
+  background-color: #CDD8E5 !important;
+
+}

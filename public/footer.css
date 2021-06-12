@@ -1,0 +1,13 @@
+.foot{
+    background-color: #193948 !important;
+    color: white;
+    height: 250px;
+}
+
+.rborder{
+    border-right: 2px solid white  ;
+}
+
+.tborder{
+    border-top: 2px solid white  ;
+}

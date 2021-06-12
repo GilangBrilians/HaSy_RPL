@@ -1,0 +1,43 @@
+.category-nav {
+	margin: 0 20%;
+}
+
+.category-nav ul li a {
+	display: block;
+	text-decoration: none;
+	padding: 1em 1.25em;
+	color: var(--passive-dark);
+	border-bottom: 3px solid var(--white);
+	opacity: 0.6;
+	font-weight: 700;
+	font-size: 1em;
+
+}
+
+.category-nav ul li a:hover {
+	display: block;
+	/* text-decoration: none;
+	padding: 1em 1.25em;
+	color: var(--passive-dark);
+	border-bottom: 3px solid var(--white); */
+	opacity: 1;
+	font-weight: 700;
+	background-size: 50px 50px;
+	background: #74BDCB;
+    color:#fff;
+    text-decoration:none
+
+}
+
+.droplink:hover { 
+	background-color: var(--primary-blue);
+	color: white;
+}
+
+.droplink-logout:hover { 
+	background-color: var(--primary-orange);
+	color: white;
+}
+
+
+  

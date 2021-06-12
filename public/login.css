@@ -1,0 +1,21 @@
+.picback{
+    background-image: url("img/sign.png") !important;
+    display: grid;
+    grid-template-columns: 5% auto 50%;
+    grid-template-rows: 5em auto 5em;
+    display: cover !important;
+    width: 100%;
+    background-repeat: no-repeat;
+   
+}
+
+.btnsign:hover{
+    color:white !important;
+    background-color: #193948;
+}
+
+.btnsum:hover{
+    color: black !important;
+    background-color: white !important;
+    border: 1px solid black !important;
+}
