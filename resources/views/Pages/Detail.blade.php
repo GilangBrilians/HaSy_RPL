@@ -7,7 +7,7 @@
 <div class="container mb-5" style="margin-top:100px">
     <div class="row">
         <div class="col-sm-6">
-            <img class="img-fluid" src="img/bag.png" alt="Card image cap">
+            <img class="img-fluid" src="{{ asset('img/bag.png') }}" alt="Card image cap">
         </div>
         <div class="col-sm-6">
             <h1 class="mt-5">{{ $barang->nama }}</h1>
