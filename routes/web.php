@@ -15,7 +15,7 @@ use App\Http\Controllers\AuthController;
 */
 
 Route::get('/', function () {
-    return view('Pages.Landing');
+    return view('Pages.PembayaranJasa');
 });
 
 Route::get('dashboard', [AuthController::class, 'dashboard']);
