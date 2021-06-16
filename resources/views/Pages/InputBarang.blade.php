@@ -9,7 +9,7 @@
 <div class="sidebar">
     <h3 class="my-5 text-center">Admin</h3>
     <a href="#">Item List</a>
-    <a class="active font-weight-bold" href="#">Input & Update Item</a>
+    <a class="active font-weight-bold" href="#">Input Item</a>
 </div>
 
 <div class="container">
@@ -25,8 +25,8 @@
                 <input type="text" class="form-control" placeholder="Masukan category barang">
             </div>
             <div class="form-group">
-                <label for="exampleInputEmail1">Item Description</label>
-                <input type="text" class="form-control" placeholder="Masukan deskripsi barang">
+                <label for="exampleInputEmail1">Item Price</label>
+                <input type="number" class="form-control" placeholder="Masukan harga barang">
             </div>
             <div class="form-group my-5">           
                 <label class="form-label" for="customFile">Picture Image</label>
