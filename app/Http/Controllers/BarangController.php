@@ -57,7 +57,9 @@ class BarangController extends Controller
      */
     public function show($id)
     {
-        //
+        $barang = Barang::findOrFail($id);
+
+        return view('Pages.Detail', compact('barang'));
     }
 
     /**

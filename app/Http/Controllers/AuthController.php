@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Hash;
 use Session;
 use App\Models\User;
+use App\Models\Barang;
 use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
@@ -60,10 +61,19 @@ class AuthController extends Controller
       ]);
     }
 
+    public function landing()
+    {
+      $barang = Barang::all()->random(4);
+
+      return view('Pages.Landing', compact('barang'));
+    }
+
     public function dashboard()
     {
         if(Auth::check()){
-            return view('Pages.Landing_login');
+          $barang = Barang::all()->random(4);
+
+          return view('Pages.Landing_login', compact('barang'));
         }
 
         return redirect("login")->withSuccess('You are not allowed to access');

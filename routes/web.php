@@ -16,9 +16,7 @@ use App\Http\Controllers\ChangePasswordController;
 |
 */
 
-Route::get('/', function () {
-    return view('Pages.Browse_barang');
-});
+Route::get('/', [AuthController::class, 'landing'])->name('/');
 
 Route::get('account', function () {
     return view('Pages.Account');
