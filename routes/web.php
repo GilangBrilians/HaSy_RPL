@@ -16,7 +16,7 @@ use App\Http\Controllers\BarangController;
 */
 
 Route::get('/', function () {
-    return view('Pages.PembayaranJasa');
+    return view('Pages.Register');
 });
 
 Route::get('dashboard', [AuthController::class, 'dashboard']);
