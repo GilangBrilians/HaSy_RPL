@@ -22,7 +22,7 @@
             </ul>
           </div><br />
     @endif
-    <div class="col-sm-12">
+    <div class="col-sm-12 ml-5">
         <h1 class="pt-5 ml-5">Update Data Barang</h1>
         <form class="mt-5 ml-5" method="POST" action="{{ route('barang.update', $barang->id) }}">
             @csrf
