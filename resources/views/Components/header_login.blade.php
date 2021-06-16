@@ -16,7 +16,7 @@
                     <input type="search" class="form-control rounded pr-5" placeholder="Search" aria-label="Search"
                         aria-describedby="search-addon" />
                     <span class="input-group-text border-0" id="search-addon">
-                        <i><img class="img-fluid" src="img/loupe.svg" width=15px></i>
+                        <i><img class="img-fluid" src="{{ asset('img/loupe.svg') }}" width=15px></i>
                     </span>
                 </div>
                 <li class="nav-item">
