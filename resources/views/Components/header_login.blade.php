@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg fixed-top py-3">
     <div class="container">
-        <a class="navbar-brand" href="#"><span style="font-weight: bold;color:black;">HaSy</span> </a>
+        <a class="navbar-brand" href="{{ route('dashboard') }}"><span style="font-weight: bold;color:black;">HaSy</span> </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -26,11 +26,11 @@
                     <a class="nav-link ml-4 mr-5" href="#"><img src="img/shopping-bag.svg" width=25px></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link ml-4 mr-5" href="#"><img src="img/user.svg" width=25px></a>
+                    <a class="nav-link ml-4 mr-5" href="{{ route('account') }}"><img src="img/user.svg" width=25px></a>
                 </li>
-            </ul>            
+            </ul>
         </div>
-    </div>    
+    </div>
 </nav>
 
 <!-- second main header -->

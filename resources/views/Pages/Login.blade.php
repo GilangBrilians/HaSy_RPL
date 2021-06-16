@@ -8,15 +8,6 @@
 
 
 <div class="row">
-    @if ($errors->any())
-      <div class="alert alert-danger">
-        <ul>
-            @foreach ($errors->all() as $error)
-              <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-      </div><br />
-    @endif
     <div class="col-sm-6 logform">
         <div class="row" style="margin: 15% 0px 0px 20%">
             <div class="col-sm-6">
@@ -27,7 +18,12 @@
             </div>
         </div>
         <div class="formin"  style="margin: 20% 0px 0px 20%" >
-            <h1 class="mb-5">Create Account</h1>
+            <h1 class="mb-5">Login to Your Account</h1>
+            @if(session()->get('success'))
+              <div class="alert alert-success">
+                {{ session()->get('success') }}
+              </div><br />
+            @endif
             <form method="POST" action="{{ route('login.custom') }}">
                 @csrf
                 <div class="form-group">

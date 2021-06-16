@@ -11,11 +11,11 @@
             <div class="card" style="width: 18rem;">
                 <img class="card-img-top" src="img/user.png" alt="Card image cap">
                 <div class="card-body">
-                    <h5 class="card-title">Flora Fauna</h5>
-                    <p class="card-text">Jakarta, Indonesia</p>
-                    <p class="card-text">Flora@gmail.com</p>
+                    <h5 class="card-title">{{ $authenticated->name }}</h5>
+                    <p class="card-text">{{ $authenticated->address }}</p>
+                    <p class="card-text">{{ $authenticated->email }}</p>
                     <center>
-                        <a href="#" class="btn px-5" style="background-color:#193948; color:white">Logout</a>
+                        <a href="{{ route('signout') }}" class="btn px-5" style="background-color:#193948; color:white">Logout</a>
                     </center>
                 </div>
             </div>
@@ -28,7 +28,7 @@
                         <img class="card-img-top" src="img/profchange.png" alt="Card image cap">
                         <div class="card-body">
                             <center>
-                                <a href="#" class="btn px-5 mt-2" style="background-color:#193948; color:white">Logout</a>
+                                <a href="#" class="btn px-5 mt-2" style="background-color:#193948; color:white">Change Image</a>
                             </center>
                             <p class="card-text mt-2">Pastikan foto yang anda pilih memiliki ukuran tidak melebihi 1 MB. Ekstensi yang diperbolehkan : jpeg.
                             jpg. png.</p>
@@ -42,7 +42,7 @@
                             <p style="font-size:20px">Nama</p>
                         </div>
                         <div class="col-sm">
-                            <p style="font-size:20px">Flora Fauna</p>
+                            <p style="font-size:20px">{{ $authenticated->name }}</p>
                         </div>
                     </div>
                     <div class="row mt-1 mb-5">
@@ -50,7 +50,7 @@
                             <p style="font-size:20px">Alamat</p>
                         </div>
                         <div class="col-sm">
-                            <p style="font-size:20px">Jakarta, Indonesia</p>
+                            <p style="font-size:20px">{{ $authenticated->address }}</p>
                         </div>
                     </div>
                     <h5>Kontak</h5>
@@ -59,23 +59,27 @@
                             <p style="font-size:20px">Email</p>
                         </div>
                         <div class="col-sm">
-                            <p style="font-size:20px">florafau@gmail.com</p>
+                            <p style="font-size:20px">{{ $authenticated->email }}</p>
                         </div>
                     </div>
-                    <form class="mt-5">
+                    <form class="mt-5"  method="POST" action="{{ route('change.password') }}">
+                        @csrf
+                        @foreach ($errors->all() as $error)
+                            <p class="text-danger">{{ $error }}</p>
+                        @endforeach
                         <div class="form-group">
-                            <label for="exampleInputEmail1" style="font-size:20px;font-weight:bold">Username</label>
-                            <input type="text" class="form-control" placeholder="Enter your Username">
+                            <label for="exampleInputEmail1" style="font-size:20px;font-weight:bold">Old Password</label>
+                            <input type="password" name="old_password" class="form-control" placeholder="Enter your old password">
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputPassword1" style="font-size:20px;font-weight:bold">Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                            <label for="exampleInputPassword1" style="font-size:20px;font-weight:bold">New Password</label>
+                            <input type="password" name="new_password" class="form-control" id="exampleInputPassword1" placeholder="Enter new password">
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputPassword1" style="font-size:20px;font-weight:bold"> Confirm Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                            <label for="exampleInputPassword1" style="font-size:20px;font-weight:bold">Confirm New Password</label>
+                            <input type="password" name="confirm_password" class="form-control" id="exampleInputPassword1" placeholder="Confirm your new password">
                         </div>
-                        
+
                         <button type="submit" style="color:white; background-color:#193948; padding: 1% 44% 1% 44%"  class="btn mt-3">Update Profile</button>
                     </form>
                 </div>
@@ -143,7 +147,7 @@
                     </div>
                 </div>
             </div>
-            
+
         </div>
     </div>
 </div>

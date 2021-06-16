@@ -39,6 +39,8 @@ class AuthController extends Controller
     {
         $request->validate([
             'email' => 'required|email|unique:users',
+            'name' => 'required|max:191',
+            'address' => 'required|max:191',
             'password' => 'required|min:6',
         ]);
 
@@ -51,8 +53,9 @@ class AuthController extends Controller
     public function create(array $data)
     {
       return User::create([
-        'name' => 'username',
         'email' => $data['email'],
+        'name' => $data['name'],
+        'address' => $data['address'],
         'password' => Hash::make($data['password'])
       ]);
     }

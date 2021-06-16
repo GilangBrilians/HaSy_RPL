@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BarangController;
+use App\Http\Controllers\ChangePasswordController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,3 +32,5 @@ Route::post('custom-registration', [AuthController::class, 'customRegistration']
 Route::get('signout', [AuthController::class, 'signOut'])->name('signout');
 
 Route::resource('barang', BarangController::class);
+
+Route::post('change-password', [ChangePasswordController::class, 'store'])->name('change.password');
