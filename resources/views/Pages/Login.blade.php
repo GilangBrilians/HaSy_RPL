@@ -18,7 +18,7 @@
       </div><br />
     @endif
     <div class="col-sm-6 logform">
-        <div class="row" style="margin: 20% 0px 0px 20%">
+        <div class="row" style="margin: 15% 0px 0px 20%">
             <div class="col-sm-6">
                 <a style="font-size: 30px; color:Black;" href="#">HaSy</a>
             </div>
@@ -31,9 +31,11 @@
             <form method="POST" action="{{ route('login.custom') }}">
                 @csrf
                 <div class="form-group">
+                    <label for="exampleInputEmail1">Email</label>
                     <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Enter email">
                 </div>
                 <div class="form-group">
+                    <label for="exampleInputEmail1">Password</label>
                     <input type="password" class="form-control" id="password" name="password" placeholder="Password">
                 </div>
                 <button type="submit" class="btn font-weight-bold mt-5"  style="color:white; background-color:#193948; padding: 3% 46% 3% 46%" >Login</button>
