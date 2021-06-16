@@ -13,4 +13,11 @@ class BrowseBarangController extends Controller
 
       return view('Pages.Browse_barang', compact('barang'));
     }
+
+    public function browsejasa()
+    {
+      $barang = Barang::all();
+
+      return view('Pages.Browse_jasa', compact('barang'));
+    }
 }

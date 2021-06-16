@@ -31,6 +31,9 @@ Route::get('service', function () {
 
 Route::get('shop', [BrowseBarangController::class, 'browseall'])->name('shop');
 
+Route::get('service', [BrowseBarangController::class, 'browsejasa'])->name('service');
+
+
 Route::get('dashboard', [AuthController::class, 'dashboard'])->name('dashboard');
 
 Route::get('payment', [AuthController::class, 'payment'])->name('payment');
