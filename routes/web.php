@@ -19,7 +19,11 @@ Route::get('/', function () {
     return view('Pages.PembayaranJasa');
 });
 
-Route::get('dashboard', [AuthController::class, 'dashboard']);
+Route::get('account', function () {
+    return view('Pages.Account');
+})->name('account')->middleware('account');
+
+Route::get('dashboard', [AuthController::class, 'dashboard'])->name('dashboard');
 Route::get('login', [AuthController::class, 'index'])->name('login');
 Route::post('custom-login', [AuthController::class, 'customLogin'])->name('login.custom');
 Route::get('registration', [AuthController::class, 'registration'])->name('register-user');
