@@ -11,10 +11,10 @@
     <div class="col-sm-6 logform">
         <div class="row" style="margin: 20% 0px 0px 20%">
             <div class="col-sm-6">
-                <h4>HaSy</h4>
+            <a style="font-size: 30px; color:Black;" href="#">HaSy</a>
             </div>
             <div class="col-sm-6">
-                <a class="btn font-weight-medium ml-5 px-5 btnsign" style="color:Black; border :1px solid black;" href="{{ route('login') }}">Sign In</a>
+                <a class="btn font-weight-medium ml-5 px-5 btnsign mt-1" style="color:Black; border :1px solid black;" href="{{ route('login') }}">Sign In</a>
             </div>
         </div>
         <div class="formin"  style="margin: 20% 0px 0px 20%" >
@@ -28,7 +28,6 @@
                     <input type="password" class="form-control" id="password" name="password" placeholder="Password">
                 </div>
                 <button type="submit" class="btn font-weight-bold mt-5 btnsum"  style="color:white; background-color:#193948; padding: 3% 45% 3% 45%" >Register</button>
-                <p class="mt-3 mb-5">Already have an account? <span><a style="color:blue" href="{{ route('login') }}"> Sign in</a><span></p>
             </form>
         </div>
     </div>
