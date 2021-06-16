@@ -19,10 +19,10 @@
                     <a class="nav-link mr-4 " style="color:black;"  href="#">About Us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link btn font-weight-bold px-5 " style="color:white;background-color:#193948;margin-left:450px;"  href="#">Sign Up</a>
+                    <a class="nav-link btn font-weight-bold px-5 " style="color:white;background-color:#193948;margin-left:450px;"  href="{{ route('register-user') }}">Sign Up</a>
                 </li>
             </ul>
-            
+
         </div>
-    </div>    
+    </div>
 </nav>
