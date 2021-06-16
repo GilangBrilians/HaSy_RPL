@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BarangController;
+use App\Http\Controllers\BrowseBarangController;
 use App\Http\Controllers\ChangePasswordController;
 
 /*
@@ -21,6 +22,12 @@ Route::get('/', [AuthController::class, 'landing'])->name('/');
 Route::get('account', function () {
     return view('Pages.Account');
 })->name('account')->middleware('account');
+
+Route::get('service', function () {
+    return view('Pages.Browse_jasa');
+})->name('service');
+
+Route::get('shop', [BrowseBarangController::class, 'browseall'])->name('shop');
 
 Route::get('dashboard', [AuthController::class, 'dashboard'])->name('dashboard');
 Route::get('login', [AuthController::class, 'index'])->name('login');

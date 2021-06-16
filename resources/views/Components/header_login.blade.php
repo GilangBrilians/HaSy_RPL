@@ -7,10 +7,10 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link mx-5"  style="color:black;" href="#">Shop <span class="sr-only">(current)</span></a>
+                    <a class="nav-link mx-5"  style="color:black;" href="{{ route('shop') }}">Shop <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link mr-5"  style="color:black;" href="#">Service</a>
+                    <a class="nav-link mr-5"  style="color:black;" href="{{ route('service') }}">Service</a>
                 </li>
                 <div class="input-group rounded mx-5">
                     <input type="search" class="form-control rounded pr-5" placeholder="Search" aria-label="Search"
