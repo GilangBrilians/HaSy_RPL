@@ -19,6 +19,8 @@ use App\Http\Controllers\ChangePasswordController;
 
 Route::get('/', [AuthController::class, 'landing'])->name('/');
 
+
+
 Route::get('account', function () {
     return view('Pages.Account');
 })->name('account')->middleware('account');
@@ -30,6 +32,11 @@ Route::get('service', function () {
 Route::get('shop', [BrowseBarangController::class, 'browseall'])->name('shop');
 
 Route::get('dashboard', [AuthController::class, 'dashboard'])->name('dashboard');
+
+Route::get('payment', [AuthController::class, 'payment'])->name('payment');
+
+Route::get('cart', [AuthController::class, 'cart'])->name('cart');
+
 Route::get('login', [AuthController::class, 'index'])->name('login');
 Route::post('custom-login', [AuthController::class, 'customLogin'])->name('login.custom');
 Route::get('registration', [AuthController::class, 'registration'])->name('register-user');

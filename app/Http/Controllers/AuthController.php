@@ -68,6 +68,16 @@ class AuthController extends Controller
       return view('Pages.Landing', compact('barang'));
     }
 
+    public function cart()
+    {
+      return view('Pages.Cart');
+    }
+
+    public function payment()
+    {
+      return view('Pages.Payment');
+    }
+
     public function dashboard()
     {
         if(Auth::check()){

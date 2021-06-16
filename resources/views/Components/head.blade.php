@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="{{ asset('sidebar.css') }}">
     <link rel="stylesheet" href="{{ asset('all.css') }}">
     <link rel="stylesheet" href="{{ asset('fontawesome.min.css') }}">
-    <link rel="icon" href="" type="image/icon type">
 
 
     

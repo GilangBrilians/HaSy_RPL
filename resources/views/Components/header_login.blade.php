@@ -20,10 +20,7 @@
                     </span>
                 </div>
                 <li class="nav-item">
-                    <a class="nav-link ml-4 mx-5"  href="#"><img src="{{ asset('img/heart.svg') }}" width=25px></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link ml-4 mx-5" href="#"><img src="{{ asset('img/shopping-bag.svg') }}" width=25px></a>
+                    <a class="nav-link ml-4 mx-5" href="{{ route('cart') }}"><img src="{{ asset('img/shopping-bag.svg') }}" width=25px></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link ml-4 mx-5" href="{{ route('account') }}"><img src="{{ asset('img/user.svg') }}" width=25px></a>
