@@ -36,7 +36,7 @@ Route::get('service', [BrowseBarangController::class, 'browsejasa'])->name('serv
 
 Route::get('dashboard', [AuthController::class, 'dashboard'])->name('dashboard');
 
-Route::get('payment', [AuthController::class, 'payment'])->name('payment');
+Route::get('payment', [AuthController::class, 'payment'])->name('payment')->middleware('account');
 
 Route::get('cart', [AuthController::class, 'cart'])->name('cart');
 

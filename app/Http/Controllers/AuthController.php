@@ -68,14 +68,20 @@ class AuthController extends Controller
       return view('Pages.Landing', compact('barang'));
     }
 
-    public function cart()
+    public function cart(Request $request)
     {
-      return view('Pages.Cart');
+      $data = $request->all();
+      $barang = Barang::findOrFail(key((array)$data));
+
+      return view('Pages.Cart', compact('barang'));
     }
 
-    public function payment()
+    public function payment(Request $request)
     {
-      return view('Pages.Payment');
+      $data = $request->all();
+      $barang = Barang::findOrFail(key((array)$data));
+
+      return view('Pages.Payment', compact('barang'));
     }
 
     public function dashboard()

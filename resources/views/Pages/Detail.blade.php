@@ -16,7 +16,7 @@
             <p class="font-weight-bold" style="color:#193948;font-size:24px">@currency($barang->harga)</p>
             <div class="row mt-5">
                 <div class="col-sm">
-                    <a class="btn rounded" style="background-color:#193948 ;width:100%; color:white"  href="{{ route('cart') }}" >Buy Now</a>
+                    <a class="btn rounded" style="background-color:#193948 ;width:100%; color:white"  href="{{ route('cart', $barang->id ) }}">Buy Now</a>
                 </div>
             </div>
 
